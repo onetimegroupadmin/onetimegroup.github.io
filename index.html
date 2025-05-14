@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>One Time | Recruitment Agency</title>
+    <link rel="icon" href="assets/images/White.png" type="image/png">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-space-dynamic.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+<!--
+    
+TemplateMo 562 Space Dynamic
+
+https://templatemo.com/tm-562-space-dynamic
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <h4>ONE<span>TIME</span></h4>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="#about">About Us</a></li>
+              <li class="scroll-to-section"><a href="#services">Services</a></li>
+              <li class="scroll-to-section"><a href="#portfolio">Portfolio</a></li>
+              <li class="scroll-to-section"><a href="#blog">Mission</a></li>
+              <li class="scroll-to-section"><a href="#contact">Message Us</a></li> 
+              <li class="scroll-to-section"><div class="main-red-button"><a href="#calendly-inline-widget">Book A Discovery Call</a></div></li> 
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <h6>Elite Talent. Precision Matches. Zero Guesswork.</h6>
+                <h2>Great Teams Don't Happen by Accident. They are Built<span> ONE</span> at a<span> TIME.</span></h2>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="assets/images/White.png" alt="team meeting">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <section class="job-section py-5">
+  <div class="container">
+    <h1 class="text-center text-white mb-5">Latest Jobs</h1>
+    <div class="row" id="job-listings">
+      <!-- Jobs will be loaded here -->
+    </div>
+  </div>
+</section>
+
+  <script>
+    fetch('assets/data/jobs.json')
+      .then(response => response.json())
+      .then(jobs => {
+        const container = document.getElementById('job-listings');
+        container.innerHTML = '';
+
+        jobs.forEach(job => {
+          const jobCard = document.createElement('div');
+          jobCard.className = 'col-lg-4 col-md-6 mb-4';
+
+          jobCard.innerHTML = `
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="card-title mb-2 fw-bold">${job.title}</h5>
+                  <h6 class="card-subtitle mb-3 text-muted">${job.location}</h6>
+                  <p class="card-text mb-4">${job.description}</p>
+                </div>
+                <div class="mt-auto">
+                  <a href="${job.applyLink}" class="btn btn-danger w-100" target="_blank">Apply For Brief</a>
+                </div>
+              </div>
+            </div>
+          `;
+          container.appendChild(jobCard);
+        });
+      })
+      .catch(error => {
+        console.error('Error loading jobs:', error);
+        document.getElementById('job-listings').innerHTML = `
+          <div class="col-12 text-center text-danger">
+            Failed to load jobs. Please try again later.
+          </div>
+        `;
+      });
+  </script>
+  <div id="about" class="about-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="left-image wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+            <img src="assets/images/Business decisions-bro.png" alt="person graphic">
+          </div>
+        </div>
+        <div class="col-lg-8 align-self-center">
+          <div class="services">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                  <div class="icon">
+                    <img src="assets/images/service-icon-01.png" alt="reporting">
+                  </div>
+                  <div class="right-text">
+                    <h4>Exclusive Talent Network</h4>
+                    <p>Complete your profile and start applying for roles that match your expertise.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                  <div class="icon">
+                    <img src="assets/images/service-icon-02.png" alt="">
+                  </div>
+                  <div class="right-text">
+                    <h4>First To Know</h4>
+                    <p>Discover roles tailored to your skills - and apply before anyone else.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
+                  <div class="icon">
+                    <img src="assets/images/service-icon-03.png" alt="">
+                  </div>
+                  <div class="right-text">
+                    <h4>Grow  With The Best</h4>
+                    <p>Land roles at top companies with great pay, real growth, and a future you deserve.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="1.1s">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+  fetch('assets/data/jobs.json')
+    .then(response => response.json())
+    .then(jobs => {
+      const container = document.getElementById('job-listings');
+      container.innerHTML = ''; // Clear if needed
+
+      jobs.forEach(job => {
+        const jobCard = document.createElement('div');
+        jobCard.className = 'col-lg-4 col-md-6 mb-4';
+
+        jobCard.innerHTML = `
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title mb-2 fw-bold">${job.title}</h5>
+                <h6 class="card-subtitle mb-3 text-muted">${job.location}</h6>
+                <p class="card-text mb-4">${job.description}</p>
+              </div>
+              <div class="mt-auto">
+                <a href="${job.applyLink}" class="btn btn-danger w-100" target="_blank">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        `;
+        container.appendChild(jobCard);
+      });
+    })
+    .catch(error => {
+      console.error('Error loading jobs:', error);
+    });
+</script>
+
+  <!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" id="calendly-inline-widget" data-url="https://calendly.com/socials-onetimegroup/30min?primary_color=fe3f40" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+
+  <div id="services" class="our-services section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+          <div class="left-image">
+            <img src="assets/images/Good team-amico.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
+          <div class="section-heading">
+            <h2>Grow your Company with our <em>Top Talent</em> acquisition services</h2>
+            <p>In today’s competitive job market, hiring top talent isn’t just about filling a position—it’s about driving growth. We deliver end-to-end talent acquisition solutions tailored to your business needs, so you can build high-performing teams faster and smarter.</p>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="first-bar progress-skill-bar">
+                <h4>Improved Quality of Hires</h4>
+                <span>70%</span>
+                <div class="filled-bar"></div>
+                <div class="full-bar"></div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="second-bar progress-skill-bar">
+                <h4>Enhanced Candidate Experience</h4>
+                <span>88%</span>
+                <div class="filled-bar"></div>
+                <div class="full-bar"></div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="third-bar progress-skill-bar">
+                <h4>Reduced Turnover</h4>
+                <span>94%</span>
+                <div class="filled-bar"></div>
+                <div class="full-bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="portfolio" class="our-portfolio section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
+            <h2>See What Our Agency <em>Offers</em> &amp; What We <span>Provide</span></h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-sm-6">
+          <a href="#">
+            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+              <div class="hidden-content">
+                <h4>Strategic Sourcing & Recruitment</h4>
+                <p>We connect you with the right candidates at the right time.</p>
+              </div>
+              <div class="showed-content">
+                <img src="assets/images/Resume-bro.png" alt="">
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <a href="#">
+            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+              <div class="hidden-content">
+                <h4>Screening & Assessment</h4>
+                <p>Every candidate is vetted through multi-stage assessments.</p>
+              </div>
+              <div class="showed-content">
+                <img src="assets/images/Resume-cuate.png" alt="">
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <a href="#">
+            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+              <div class="hidden-content">
+                <h4>Data-Driven Hiring</h4>
+                <p>Our clients have saved up to 25% in hiring costs.</p>
+              </div>
+              <div class="showed-content">
+                <img src="assets/images/Resume-pana.png" alt="">
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <a href="#">
+            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+              <div class="hidden-content">
+                <h4>Onboarding & Retention Support</h4>
+                <p>We support you in retaining top talent—helping improve first-year retention rates.</p>
+              </div>
+              <div class="showed-content">
+                <img src="assets/images/Resume-rafiki.png" alt="">
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+  <div id="blog" class="our-blog section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
+        </div>
+        <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
+          <div class="left-image">
+            <a href="#"><img src="assets/images/samuel.JPG" alt="Workspace Desktop"></a>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
+          <div class="right-list">
+            <ul>
+              <li>
+                <div class="left-content align-self-center">
+                  <a href="#"><h4>Our Mission</h4></a>
+                  <p class="mission-text">This agency was built on a simple but powerful belief: that the right opportunity, at the right time, can change a life. Whether you’re an employer searching for the perfect addition to your team, or a candidate ready to take the next step in your journey, we’re here to make sure that your next move is the right one — not by chance, but by purpose.
+                    <br><br>At One Time, we value trust, clarity, and connection. Our mission is to create a recruitment experience that feels less like a transaction and more like a partnership. We take pride in making people feel seen, heard, and supported — every step of the way. <br><br>Thank you for choosing us to be part of your story. Let’s make this moment count.
+                    <br><br>Sam Seton-Smith <br>Co-Founder, One Time
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <section>
+     <div id="blog1" class="our-blog1 section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
+        </div>
+        <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
+          <div class="left-image">
+            <a href="#"><img src="assets/images/liso.JPG" alt="Workspace Desktop"></a>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
+          <div class="right-list">
+            <ul>
+              <li>
+                <div class="left-content align-self-center">
+                  <a href="#"><h4>Our Vision</h4></a>
+                  <p class="vision-text">At One Time, we are building more than just a recruitment agency— we are building bridges. Our vision is to connect people to opportunity with purpose, empathy, and precision. <br><br>We want every candidate we work with to feel seen, heard, and championed—and every client to know we’ve got their back, every step of the way. <br><br>
+                    We believe in doing things once, properly. That means finding the right fit the first time, and fostering relationships that last. Our goal is to turn potential into progress—for businesses, for individuals, and for the communities we’re part of. <br><br>
+                    And we’re only just getting started. <br><br>
+                    Liso Kwaza <br>Co-Founder, One Time
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <div id="contact" class="contact-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
+          <div class="section-heading">
+            <h2>Feel Free To Send Us a Message</h2>
+            <p>Ready to hire smarter? Whether you're looking to fill a single role or build a long-term recruitment strategy, we're here to help. Let’s talk about how we can connect you with the right talent—faster, smarter, and more cost-effectively.</p>
+            <div class="phone-info">
+              <h4>hello@onetimegroup.co.za</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
+          <form id="contact" action="" method="post">
+            <div class="row">
+              <div class="col-lg-6">
+                <fieldset>
+                  <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                  <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <textarea name="message" type="text" class="form-control" id="message" placeholder="Message" required=""></textarea>  
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="main-button ">Send Message</button>
+                </fieldset>
+              </div>
+            </div>
+            <div class="contact-dec">
+              <img src="assets/images/contact-decoration.png" alt="">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
+          <p>© Copyright 2025 One Time Group All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  
+  </footer>
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/templatemo-custom.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Human Resources consultant",
+    "location": "Cape Town",
+    "description": "We’re looking for a dynamic HR Consultant to provide expert advice and support across all core HR and IR functions ",
+    "applyLink": "mailto:jobs@onetimegroup.co.za?subject=Application: Senior Software Engineer"
+  },
+  {
+    "title": "Marketing Manager",
+    "location": "Johannesburg",
+    "description": "Drive strategic campaigns and brand initiatives across digital and traditional platforms.",
+    "applyLink": "mailto:jobs@onetimegroup.co.za?subject=Application: Marketing Manager"
+  },
+  {
+    "title": "Human Resources Business Partner",
+    "location": "Durban",
+    "description": "Support internal HR functions including talent development, employee engagement, and compliance.",
+    "applyLink": "mailto:jobs@onetimegroup.co.za?subject=Application: HR Business Partner"
+  },
+  {
+    "title": "UX/UI Designer",
+    "location": "Remote",
+    "description": "Craft user-centered designs and intuitive digital experiences for web and mobile products.",
+    "applyLink": "mailto:jobs@onetimegroup.co.za?subject=Application: UX/UI Designer"
+  },
+  {
+    "title": "Sales Executive – B2B SaaS",
+    "location": "Pretoria",
+    "description": "Join a high-performing team to close enterprise deals and build long-term client relationships.",
+    "applyLink": "mailto:jobs@onetimegroup.co.za?subject=Application: Sales Executive B2B"
+  },
+  {
+    "title": "Data Analyst",
+    "location": "Cape Town",
+    "description": "Analyze data trends and provide actionable insights to drive business decisions.",
+    "applyLink": "mailto:jobs@onetimegroup.co.za?subject=Application: Data Analyst"
+  }
+]
